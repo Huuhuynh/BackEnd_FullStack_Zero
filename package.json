@@ -1,0 +1,26 @@
+{
+  "name": "full-stack-zero",
+  "version": "1.0.0",
+  "description": "HuynhNH",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huuhuynh/BackEnd_FullStack_Zero.git"
+  },
+  "keywords": [
+    "Huynh@123"
+  ],
+  "author": "HuynhNH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Huuhuynh/BackEnd_FullStack_Zero/issues"
+  },
+  "homepage": "https://github.com/Huuhuynh/BackEnd_FullStack_Zero#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
