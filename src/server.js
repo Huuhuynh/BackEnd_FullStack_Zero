@@ -1,16 +1,17 @@
-const express = require('express')
-const path = require('path')
-const app = express()
-const port = 3000
+require("dotenv").config();
+const hostingName = process.env.HOST_NAME;
+const port = process.env.PORT || 8888;
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs')
+const express = require("express");
+const configViewEngine = require('./config/viewEngine')
 
+const webRouter =  require('./routes/web')
+ 
+const app = express();
+configViewEngine(app);
 
-app.get('/', (req, res) => {
-  res.render('sample.ejs')
-})
+app.use('/', webRouter)
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.listen(port, hostingName, () => {
+  console.log(`Example app listening on port ${port}`);
+});
